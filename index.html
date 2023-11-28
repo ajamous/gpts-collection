@@ -103,11 +103,20 @@
                 <div class="p-5">
                     <h2 class="text-xl font-bold mb-2">TCXC PaaS Ai Assistant (Private GPT) </h2>
                     <p class="mb-4">TCXC PaaS Expert, proficient in TCXC Platform as a Service</p>
-                    <a class="text-indigo-400 hover:text-indigo-300">Private </a>
+                    <a id="privateText" class="text-indigo-400 hover:text-indigo-300 cursor-pointer">Private</a>
                     <i class="fas fa-lock"></i>
                 </div>
             </div>
             
+            <!-- Hidden message, initially not displayed -->
+            <div id="message" class="hidden p-4 mb-4 text-sm text-indigo-700 bg-indigo-100 rounded-lg" role="alert">
+                This GPT is private.
+            </div>
+                <script>document.getElementById("privateText").addEventListener("click", function() {
+                    document.getElementById("message").classList.remove("hidden");
+                });
+                </script>
+
         </div>
     </div>
 </body>
